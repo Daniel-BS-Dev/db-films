@@ -1,7 +1,7 @@
 import { ReactComponent as Git } from "../../assets/git.svg";
 import "./styles.css";
 
-const Header = () => (
+const Navbar = () => (
     <header className="container-header">
     <nav className="content-header">
       <h1 className="title-header">DBFilms</h1>
@@ -13,4 +13,4 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+export default Navbar;
