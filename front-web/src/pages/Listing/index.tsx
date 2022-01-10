@@ -1,6 +1,7 @@
 import Pagination from "../../components/Pagination";
 import CardMovie from "../CardMovie";
 
+
 const Listing = () => {
   return (
     <>
