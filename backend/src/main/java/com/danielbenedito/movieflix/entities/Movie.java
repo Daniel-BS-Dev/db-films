@@ -1,6 +1,9 @@
 package com.danielbenedito.movieflix.entities;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	private String title;
