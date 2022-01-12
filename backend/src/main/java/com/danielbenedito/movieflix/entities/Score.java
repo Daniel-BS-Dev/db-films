@@ -27,19 +27,19 @@ public class Score implements Serializable{
 		this.value = value;
 	}
 
-	public User user() {
+	public User getUser() {
 		return id.getUser();
 	}
 
-	public void user(User user) {
+	public void setUser(User user) {
 		id.setUser(user);
 	}
 	
-	public Movie movie() {
+	public Movie getMovie() {
 		return id.getMovie();
 	}
 
-	public void user(Movie movie) {
+	public void setMovie(Movie movie) {
 		id.setMovie(movie);
 	}
 

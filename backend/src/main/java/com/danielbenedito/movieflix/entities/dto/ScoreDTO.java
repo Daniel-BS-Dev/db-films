@@ -22,8 +22,8 @@ public class ScoreDTO implements Serializable{
 	}
 	
 	public ScoreDTO(Score entity) {
-	    idMovie = entity.movie().getId();
-		emailUser = entity.user().getEmail();
+	    idMovie = entity.getMovie().getId();
+		emailUser = entity.getUser().getEmail();
 		value = entity.getValue();
 	}
 
