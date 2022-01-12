@@ -21,5 +21,13 @@ public class MovieService {
 		Page<Movie> list = repository.findAll(page);
 		return list.map(x -> new MovieDTO(x));
 	}
+	
+	
+	@Transactional(readOnly = true)
+	public MovieDTO findById(Long id) {
+		Movie entity = repository.findById(id).get();
+		return new MovieDTO(entity);
+		
+	}
 
 }
