@@ -10,7 +10,7 @@ const Pagination = () => {
         </button>
         <p>{`${1} de ${3}`}</p>
         <button className="dsmovie-pagination-button" disabled={false}>
-          <Arrow  />
+          <Arrow className="dsmovie-flip-active" />
         </button>
       </div>
     </div>

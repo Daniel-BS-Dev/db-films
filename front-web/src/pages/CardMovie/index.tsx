@@ -12,7 +12,7 @@ const CardMovie = () => {
     };
 
   return (
-    <div>
+    <div className="container-card">
       <img
         className="dsmovie-movie-card-image"
         src={movie.image}
@@ -23,7 +23,7 @@ const CardMovie = () => {
         <MovieScore />
         <Link to={`/form/${movie.id}`} className="btn btn-primary dsmovie-btn">Avaliar</Link>
       </div>
-    </div>
+      </div>
   );
 };
 
