@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.danielbenedito.movieflix.entities.Movie;
-import com.danielbenedito.movieflix.entities.MovieDTO;
+import com.danielbenedito.movieflix.entities.dto.MovieDTO;
 import com.danielbenedito.movieflix.entities.repositories.MovieRepository;
 
 @Service
@@ -25,7 +25,7 @@ public class MovieService {
 	
 	@Transactional(readOnly = true)
 	public MovieDTO findById(Long id) {
-		Movie entity = repository.findById(id).get();
+		Movie entity = repository.findById(id).get(); // get() transforma meu movie em optinal
 		return new MovieDTO(entity);
 		
 	}

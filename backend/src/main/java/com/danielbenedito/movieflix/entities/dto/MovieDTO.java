@@ -1,6 +1,8 @@
-package com.danielbenedito.movieflix.entities;
+package com.danielbenedito.movieflix.entities.dto;
 
 import java.io.Serializable;
+
+import com.danielbenedito.movieflix.entities.Movie;
 
 public class MovieDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
