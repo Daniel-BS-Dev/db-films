@@ -12,17 +12,19 @@ public class MovieDTO implements Serializable{
     private Double score;
     private Integer count;
     private String image;
+    private String url;
     
 	public MovieDTO() {
 		
 	}
 	
-	public MovieDTO(Long id, String title, Double score, Integer count, String image) {
+	public MovieDTO(Long id, String title, Double score, Integer count, String image, String url) {
 		this.id = id;
 		this.title = title;
 		this.score = score;
 		this.count = count;
 		this.image = image;
+		this.url = url;
 	}
 	
 	public MovieDTO(Movie entity) {
@@ -31,6 +33,7 @@ public class MovieDTO implements Serializable{
 		score = entity.getScore();
 		count = entity.getCount();
 		image = entity.getImage();
+		url = entity.getUrl();
 	}
 
 	public Long getId() {
@@ -71,5 +74,13 @@ public class MovieDTO implements Serializable{
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+	
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }
