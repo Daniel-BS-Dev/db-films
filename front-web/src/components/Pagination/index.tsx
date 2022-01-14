@@ -1,6 +1,4 @@
 import { ReactComponent as Arrow } from "../../assets/arrow.svg";
-import { Movie } from "../../types/types";
-import { generatedList } from "../../utils/list";
 import "./styles.css";
 
 const Pagination = () =>{

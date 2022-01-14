@@ -18,7 +18,7 @@ const CardMovie = ({movie} : Props) => {
       <div className="dsmovie-card-bottom-container">
         <h3>{movie.title}</h3>
         <MovieScore />
-        <Link to={`/form/${movie.id}`} className="btn btn-primary dsmovie-btn">Avaliar</Link>
+        <Link to={`/form/${movie.id}`} className="btn btn-dark dsmovie-btn">Avaliar</Link>
       </div>
       </div>
   );
