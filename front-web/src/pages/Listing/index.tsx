@@ -14,8 +14,8 @@ const Listing = () => {
       method: "GET",
       url: "/movies",
       params: {
-        page: 3,
-        linePerPage: 8,
+        page: 0,
+        linePerPage: 10000,
       },
     };
 

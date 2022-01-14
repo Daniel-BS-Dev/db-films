@@ -1,6 +1,46 @@
 .container-card{
     margin-bottom: 30px;
-    
+}
+
+.dsmovie-movie-card-image{
+    height: 300px;
+}
+
+.trailer{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #fff;
+    background-color: black;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.trailer a{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+
+}
+
+
+.dsmovie-btn:hover{
+   opacity: 0.8;
+}
+
+.trailer:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.trailer a:hover{
+    color: white;
+
 }
 
 .dsmovie-stars-container {
