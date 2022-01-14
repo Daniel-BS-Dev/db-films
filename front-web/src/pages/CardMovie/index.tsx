@@ -16,13 +16,13 @@ const CardMovie = ({ movie }: Props) => {
         alt={movie.title}
       />
       <div className="trailer">
-        <a href={movie.url} title="trailer" target="_blank" rel="noreferrer">
+        <a href={movie.url} title="trailer do filme acima" target="_blank" rel="noreferrer">
           trailer
         </a>
       </div>
       <div className="dsmovie-card-bottom-container">
         <h3 className="title">{movie.title}</h3>
-        <MovieScore />
+        <MovieScore score={movie.score} count={movie.count}/>
         <Link to={`/form/${movie.id}`} className="btn btn-dark dsmovie-btn">
           Avaliar
         </Link>
