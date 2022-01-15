@@ -6,16 +6,27 @@ import { AxiosRequestConfig } from "axios";
 import CardMovie from "../CardMovie";
 
 const Listing = () => {
-  const [movies, setMovies] = useState<MoviePage>();
+  const [movies, setMovies] = useState<MoviePage>({
+    content: [],
+    last: true,
+    totalPages: 0,
+    totalElements: 0,
+    size: 12,
+    number: 0,
+    first: true,
+    numberOfElements: 0,
+    empty: true,
+  });
   const [isLoader, setIsLoader] = useState(false);
+  const [activePage, setActivePage] = useState(0);
 
   useEffect(() => {
     const params: AxiosRequestConfig = {
       method: "GET",
       url: "/movies",
       params: {
-        page: 0,
-        linePerPage: 10000,
+        page: activePage,
+        linePerPage: 6,
       },
     };
 
@@ -27,11 +38,11 @@ const Listing = () => {
       .finally(() => {
         setIsLoader(false);
       });
-  }, []);
+  }, [activePage]);
 
   return (
     <>
-      <Pagination  />
+      <Pagination page={movies} onChange = {(changePage: number) => setActivePage(changePage)}/>
       <div className="container">
         <div className="row ">
           {isLoader ? (
