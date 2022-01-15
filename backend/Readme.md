@@ -1,5 +1,22 @@
 # Checklist
 
+## Dependências
+- Web
+- JPA
+- H2
+- Postgres
+- Security
+
+## Ajuste no arquivo pom.xml
+``````java
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-resources-plugin</artifactId>
+	<version>3.1.0</version>
+</plugin>
+``````````
+
+
 ## configuração de segurança
 
 `````java
