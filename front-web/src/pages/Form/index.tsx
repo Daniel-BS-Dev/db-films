@@ -51,8 +51,7 @@ const Form = () => {
     }
 
     requestBackend(config)
-    .then(response => {
-      console.log(response.data);
+    .then(() => {
       navigate('/')
   })
   }
