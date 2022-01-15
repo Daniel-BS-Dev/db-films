@@ -1,9 +1,10 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { requestBackend } from "../../utils/request";
+import { BASE_URL, requestBackend } from "../../utils/request";
 import { useEffect, useState } from "react";
 import { Movie } from "../../types/types";
 import { AxiosRequestConfig } from "axios";
 import "./styles.css";
+import { validateEmail } from "../../utils/validate";
 
 type UrlParams = {
   movieId: string;
@@ -29,6 +30,33 @@ const Form = () => {
     navigate("/");
   };
 
+  function handleSumit(event: React.FormEvent<HTMLFormElement>){
+    event.preventDefault();
+    const email = (event.target as any).email.value;
+    const score = (event.target as any).score.value;
+
+    if(!validateEmail(email)){
+      return;
+    }
+
+    const config: AxiosRequestConfig = {
+      baseURL: BASE_URL,
+      method: 'PUT',
+      url: '/scores',
+      data: {
+        emailUser: email,
+        idMovie:movieId,
+        value: score
+      }
+    }
+
+    requestBackend(config)
+    .then(response => {
+      console.log(response.data);
+      navigate('/')
+  })
+  }
+
   return (
     <div className="dsmovie-form-container">
       <img
@@ -38,7 +66,7 @@ const Form = () => {
       />
       <div className="dsmovie-card-bottom-container">
         <h3>{movie?.title}</h3>
-        <form className="dsmovie-form">
+        <form className="dsmovie-form" onSubmit={handleSumit}>
           <div className="form-group dsmovie-form-group">
             <label htmlFor="email">Informe seu email</label>
             <input type="email" className="form-control" id="email" />
