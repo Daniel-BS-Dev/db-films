@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+3 Checklist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Preparação
 
-## Available Scripts
+``````
+node -v
+yarn -v
+````````
 
-In the project directory, you can run:
+## INstalaçãodo yarn
 
-### `yarn start`
+``````
+npm install --global yarn
+````````
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Criando projeto
+``````
+yarn create react-app frontend --template typescript
+````````
+ou
+``````
+npx create-react-app frontend --template typescript
+````````
+### IMPORTANTE: deletar subpasta .git
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## adicionar Bootstrap e CSS ao projeto
+``````
+yarn add bootstrap@5.1.3
+````````
 
-### `yarn test`
+## Arquivo index.css
+``````
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-### `yarn build`
+:root {
+  --color-primary: #4D41C0;
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+html, body {
+    background-color: #E5E5E5;
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+a, a:hover {
+  text-decoration: none;
+  color: unset;
+}
+``````````
 
-### `yarn eject`
+## Arquivo index.tsx
+``````
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
+````````
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Rotas: Instalando o react router dom
+``````
+yarn add react-router-dom@6.2.1 @types/react-router-dom@5.3.2
+````````
