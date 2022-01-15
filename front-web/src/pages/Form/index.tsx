@@ -1,10 +1,12 @@
-import { useNavigate, useParams } from "react-router-dom";
 import { BASE_URL, requestBackend } from "../../utils/request";
+import { useNavigate, useParams } from "react-router-dom";
+import { validateEmail } from "../../utils/validate";
 import { useEffect, useState } from "react";
 import { Movie } from "../../types/types";
 import { AxiosRequestConfig } from "axios";
+import { toast } from "react-toastify";
 import "./styles.css";
-import { validateEmail } from "../../utils/validate";
+
 
 type UrlParams = {
   movieId: string;
@@ -52,8 +54,12 @@ const Form = () => {
 
     requestBackend(config)
     .then(() => {
+      toast.success(`Avaliação salva com sucesso!`);
       navigate('/')
   })
+  .catch(() => {
+    toast.error('Erro ao salvar avaliação');
+   })
   }
 
   return (
