@@ -7,7 +7,7 @@ node -v
 yarn -v
 ````````
 
-## INstalaçãodo yarn
+## Instalaçãodo yarn
 
 ``````
 npm install --global yarn
