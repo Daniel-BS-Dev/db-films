@@ -11,8 +11,9 @@ uma página com algumas informações sobre filmes, podendo ter a interação co
 ![Sem título](https://user-images.githubusercontent.com/81425846/149604741-5c6043c3-e730-4a75-aacf-adffb2b3912b.png)
 
 # Front end 
-
+## Filmes
 ![movies](https://user-images.githubusercontent.com/81425846/149604900-9e26c8cb-a06b-4305-bf3e-f0701a84f799.png)
+## Avaliar Filme
 ![form](https://user-images.githubusercontent.com/81425846/149605286-38f53b0e-8568-4429-930d-b17f0363d467.png)
 
    
