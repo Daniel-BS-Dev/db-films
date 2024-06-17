@@ -40,7 +40,7 @@ uma página com algumas informações sobre filmes, podendo ter a interação co
  
    Neste projeto eu aprendi como criar uma aplicação do zero a nuvem, usar o spring boot com o java para desenvolver a parte do backend, hospedar no heroku, usar o 
    postgres como banco na nuvem, fazer consultas jpa, fazer requisições http, desenvolver baseado no padrão camadas MVC, fazer a interação com o front end usando o axios,
-   estilizar a pagina com visual agradável, manipular mapas para localização, usar o expo para desenvolver na parte do mobile
+   estilizar a pagina com visual agradável.
    
  #### Link do projeto: https://dbfilms.netlify.app
 
